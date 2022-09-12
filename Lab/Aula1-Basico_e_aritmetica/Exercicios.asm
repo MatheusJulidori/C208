@@ -26,5 +26,17 @@
 	subi $t9,$t8,150
 	
 #Desafio 1
-
+	
+	li $v0,5 #Setar para entrada
+	syscall #Chamar entrada
+	move $t1,$v0 #mover entrada pra t1
+	li $v0,1 #setar para exibir a0
+	add $a0,$t1,30 #somar t1 com 30 e salvar em a0
+	syscall #chamar print de a0
+	
 #Desafio 2	
+	li $t2,54
+	li $t3,45
+	li $v0,1
+	add $a0,$t2,$t3
+	syscall
